@@ -63,7 +63,17 @@
 		.ent {
 			color: Gray;
 		}
-		@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 700px)  {
+		#lodd {
+			margin: 100px;
+			text-align: center;
+		}
+		.loddd {
+			padding: 4px;
+			margin: 50px;
+			color: rgb(255,255,255);
+			font-size: 20px;
+		}
+		@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 900px)  {
 			.left {
 				float: none;
 			}
@@ -93,7 +103,6 @@
 			}
 			.info {
 				padding: 45px;
-				width: 87%;
 			}
 			h1{
 				font-size: 70px;
@@ -102,11 +111,22 @@
 				height: 430px; 
 				width: 430px;
 			}
+			.loddd {
+				font-size: 80px;
+			}
+			#lodd {
+				margin: 300px;
+			}
 		}
 	</style>
 </head>
 <body>
 	<div class="main">
+		<div id="lodd">
+		<p class="head">7V</p>
+		<p class="loddd" id="lodtext">Идет загрузка</p>
+		</div>
+
 		<p class="head">7V</p>
 		<a href="indexyr.html" class="clki">Гейминг</a>
 		<a href="index.html" class="clki ent">Уроки</a>
@@ -135,5 +155,13 @@
 			</p>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-2.1.0.js">
+	</script>
+	<script>
+		$("#main").slideUp(0);
+		$("#lodtext").fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+		$("#lodd").delay(3000).slideUp(1000);
+		$("#main").delay(3000).slideDown(1000);
+	</script>
 </body>
 </html>
