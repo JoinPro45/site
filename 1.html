@@ -11,10 +11,12 @@
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 	<a-scene embedded arjs>
 		<a-marker preset="hiro">
-		<a-entity 
-			obj-model=”obj: url(https://joinpro45.github.io/site/13.obj); 
-            		mtl: url(https://joinpro45.github.io/site/13.mtl)”>
-		</a-entity>
+		<a-assets>
+    			<a-asset-item id="tree-obj" src="https://joinpro45.github.io/site/13.obj"></a-asset-item>
+    			<a-asset-item id="tree-mtl" src="https://joinpro45.github.io/site/13.mtl"></a-asset-item>
+  		</a-assets>
+
+  			<a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
 	</a-scene>
